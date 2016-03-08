@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87FF11671C8E9BE700B6E676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF11661C8E9BE700B6E676 /* main.m */; };
+		87FF116A1C8E9BE700B6E676 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF11691C8E9BE700B6E676 /* AppDelegate.m */; };
+		87FF116D1C8E9BE700B6E676 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF116C1C8E9BE700B6E676 /* ViewController.m */; };
+		87FF11701C8E9BE700B6E676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FF116E1C8E9BE700B6E676 /* Main.storyboard */; };
+		87FF11731C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87FF11711C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodeld */; };
+		87FF11751C8E9BE700B6E676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FF11741C8E9BE700B6E676 /* Assets.xcassets */; };
+		87FF11781C8E9BE700B6E676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FF11761C8E9BE700B6E676 /* LaunchScreen.storyboard */; };
+		87FF11831C8E9BE700B6E676 /* KKPhotoBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF11821C8E9BE700B6E676 /* KKPhotoBrowserTests.m */; };
+		87FF118E1C8E9BE700B6E676 /* KKPhotoBrowserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF118D1C8E9BE700B6E676 /* KKPhotoBrowserUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87FF117F1C8E9BE700B6E676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87FF115A1C8E9BE700B6E676 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87FF11611C8E9BE700B6E676;
+			remoteInfo = KKPhotoBrowser;
+		};
+		87FF118A1C8E9BE700B6E676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87FF115A1C8E9BE700B6E676 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87FF11611C8E9BE700B6E676;
+			remoteInfo = KKPhotoBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87FF11621C8E9BE700B6E676 /* KKPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FF11661C8E9BE700B6E676 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87FF11681C8E9BE700B6E676 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87FF11691C8E9BE700B6E676 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87FF116B1C8E9BE700B6E676 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		87FF116C1C8E9BE700B6E676 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87FF116F1C8E9BE700B6E676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87FF11721C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KKPhotoBrowser.xcdatamodel; sourceTree = "<group>"; };
+		87FF11741C8E9BE700B6E676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87FF11771C8E9BE700B6E676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87FF11791C8E9BE700B6E676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FF117E1C8E9BE700B6E676 /* KKPhotoBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKPhotoBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FF11821C8E9BE700B6E676 /* KKPhotoBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPhotoBrowserTests.m; sourceTree = "<group>"; };
+		87FF11841C8E9BE700B6E676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FF11891C8E9BE700B6E676 /* KKPhotoBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKPhotoBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FF118D1C8E9BE700B6E676 /* KKPhotoBrowserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPhotoBrowserUITests.m; sourceTree = "<group>"; };
+		87FF118F1C8E9BE700B6E676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87FF115F1C8E9BE700B6E676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FF117B1C8E9BE700B6E676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FF11861C8E9BE700B6E676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87FF11591C8E9BE700B6E676 = {
+			isa = PBXGroup;
+			children = (
+				87FF11641C8E9BE700B6E676 /* KKPhotoBrowser */,
+				87FF11811C8E9BE700B6E676 /* KKPhotoBrowserTests */,
+				87FF118C1C8E9BE700B6E676 /* KKPhotoBrowserUITests */,
+				87FF11631C8E9BE700B6E676 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87FF11631C8E9BE700B6E676 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87FF11621C8E9BE700B6E676 /* KKPhotoBrowser.app */,
+				87FF117E1C8E9BE700B6E676 /* KKPhotoBrowserTests.xctest */,
+				87FF11891C8E9BE700B6E676 /* KKPhotoBrowserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87FF11641C8E9BE700B6E676 /* KKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				87FF11681C8E9BE700B6E676 /* AppDelegate.h */,
+				87FF11691C8E9BE700B6E676 /* AppDelegate.m */,
+				87FF116B1C8E9BE700B6E676 /* ViewController.h */,
+				87FF116C1C8E9BE700B6E676 /* ViewController.m */,
+				87FF116E1C8E9BE700B6E676 /* Main.storyboard */,
+				87FF11741C8E9BE700B6E676 /* Assets.xcassets */,
+				87FF11761C8E9BE700B6E676 /* LaunchScreen.storyboard */,
+				87FF11791C8E9BE700B6E676 /* Info.plist */,
+				87FF11711C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodeld */,
+				87FF11651C8E9BE700B6E676 /* Supporting Files */,
+			);
+			path = KKPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		87FF11651C8E9BE700B6E676 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87FF11661C8E9BE700B6E676 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87FF11811C8E9BE700B6E676 /* KKPhotoBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				87FF11821C8E9BE700B6E676 /* KKPhotoBrowserTests.m */,
+				87FF11841C8E9BE700B6E676 /* Info.plist */,
+			);
+			path = KKPhotoBrowserTests;
+			sourceTree = "<group>";
+		};
+		87FF118C1C8E9BE700B6E676 /* KKPhotoBrowserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87FF118D1C8E9BE700B6E676 /* KKPhotoBrowserUITests.m */,
+				87FF118F1C8E9BE700B6E676 /* Info.plist */,
+			);
+			path = KKPhotoBrowserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87FF11611C8E9BE700B6E676 /* KKPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FF11921C8E9BE700B6E676 /* Build configuration list for PBXNativeTarget "KKPhotoBrowser" */;
+			buildPhases = (
+				87FF115E1C8E9BE700B6E676 /* Sources */,
+				87FF115F1C8E9BE700B6E676 /* Frameworks */,
+				87FF11601C8E9BE700B6E676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKPhotoBrowser;
+			productName = KKPhotoBrowser;
+			productReference = 87FF11621C8E9BE700B6E676 /* KKPhotoBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87FF117D1C8E9BE700B6E676 /* KKPhotoBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FF11951C8E9BE700B6E676 /* Build configuration list for PBXNativeTarget "KKPhotoBrowserTests" */;
+			buildPhases = (
+				87FF117A1C8E9BE700B6E676 /* Sources */,
+				87FF117B1C8E9BE700B6E676 /* Frameworks */,
+				87FF117C1C8E9BE700B6E676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87FF11801C8E9BE700B6E676 /* PBXTargetDependency */,
+			);
+			name = KKPhotoBrowserTests;
+			productName = KKPhotoBrowserTests;
+			productReference = 87FF117E1C8E9BE700B6E676 /* KKPhotoBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87FF11881C8E9BE700B6E676 /* KKPhotoBrowserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FF11981C8E9BE700B6E676 /* Build configuration list for PBXNativeTarget "KKPhotoBrowserUITests" */;
+			buildPhases = (
+				87FF11851C8E9BE700B6E676 /* Sources */,
+				87FF11861C8E9BE700B6E676 /* Frameworks */,
+				87FF11871C8E9BE700B6E676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87FF118B1C8E9BE700B6E676 /* PBXTargetDependency */,
+			);
+			name = KKPhotoBrowserUITests;
+			productName = KKPhotoBrowserUITests;
+			productReference = 87FF11891C8E9BE700B6E676 /* KKPhotoBrowserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87FF115A1C8E9BE700B6E676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = kakao.inc;
+				TargetAttributes = {
+					87FF11611C8E9BE700B6E676 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					87FF117D1C8E9BE700B6E676 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 87FF11611C8E9BE700B6E676;
+					};
+					87FF11881C8E9BE700B6E676 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 87FF11611C8E9BE700B6E676;
+					};
+				};
+			};
+			buildConfigurationList = 87FF115D1C8E9BE700B6E676 /* Build configuration list for PBXProject "KKPhotoBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87FF11591C8E9BE700B6E676;
+			productRefGroup = 87FF11631C8E9BE700B6E676 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87FF11611C8E9BE700B6E676 /* KKPhotoBrowser */,
+				87FF117D1C8E9BE700B6E676 /* KKPhotoBrowserTests */,
+				87FF11881C8E9BE700B6E676 /* KKPhotoBrowserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87FF11601C8E9BE700B6E676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FF11781C8E9BE700B6E676 /* LaunchScreen.storyboard in Resources */,
+				87FF11751C8E9BE700B6E676 /* Assets.xcassets in Resources */,
+				87FF11701C8E9BE700B6E676 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FF117C1C8E9BE700B6E676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FF11871C8E9BE700B6E676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87FF115E1C8E9BE700B6E676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FF116D1C8E9BE700B6E676 /* ViewController.m in Sources */,
+				87FF116A1C8E9BE700B6E676 /* AppDelegate.m in Sources */,
+				87FF11671C8E9BE700B6E676 /* main.m in Sources */,
+				87FF11731C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FF117A1C8E9BE700B6E676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FF11831C8E9BE700B6E676 /* KKPhotoBrowserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FF11851C8E9BE700B6E676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FF118E1C8E9BE700B6E676 /* KKPhotoBrowserUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87FF11801C8E9BE700B6E676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87FF11611C8E9BE700B6E676 /* KKPhotoBrowser */;
+			targetProxy = 87FF117F1C8E9BE700B6E676 /* PBXContainerItemProxy */;
+		};
+		87FF118B1C8E9BE700B6E676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87FF11611C8E9BE700B6E676 /* KKPhotoBrowser */;
+			targetProxy = 87FF118A1C8E9BE700B6E676 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87FF116E1C8E9BE700B6E676 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87FF116F1C8E9BE700B6E676 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87FF11761C8E9BE700B6E676 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87FF11771C8E9BE700B6E676 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87FF11901C8E9BE700B6E676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87FF11911C8E9BE700B6E676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87FF11931C8E9BE700B6E676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KKPhotoBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KKPhotoBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		87FF11941C8E9BE700B6E676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KKPhotoBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KKPhotoBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		87FF11961C8E9BE700B6E676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KKPhotoBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KKPhotoBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKPhotoBrowser.app/KKPhotoBrowser";
+			};
+			name = Debug;
+		};
+		87FF11971C8E9BE700B6E676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KKPhotoBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KKPhotoBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKPhotoBrowser.app/KKPhotoBrowser";
+			};
+			name = Release;
+		};
+		87FF11991C8E9BE700B6E676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KKPhotoBrowserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KKPhotoBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KKPhotoBrowser;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		87FF119A1C8E9BE700B6E676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KKPhotoBrowserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.KKPhotoBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KKPhotoBrowser;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87FF115D1C8E9BE700B6E676 /* Build configuration list for PBXProject "KKPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FF11901C8E9BE700B6E676 /* Debug */,
+				87FF11911C8E9BE700B6E676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87FF11921C8E9BE700B6E676 /* Build configuration list for PBXNativeTarget "KKPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FF11931C8E9BE700B6E676 /* Debug */,
+				87FF11941C8E9BE700B6E676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		87FF11951C8E9BE700B6E676 /* Build configuration list for PBXNativeTarget "KKPhotoBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FF11961C8E9BE700B6E676 /* Debug */,
+				87FF11971C8E9BE700B6E676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		87FF11981C8E9BE700B6E676 /* Build configuration list for PBXNativeTarget "KKPhotoBrowserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FF11991C8E9BE700B6E676 /* Debug */,
+				87FF119A1C8E9BE700B6E676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87FF11711C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87FF11721C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodel */,
+			);
+			currentVersion = 87FF11721C8E9BE700B6E676 /* KKPhotoBrowser.xcdatamodel */;
+			path = KKPhotoBrowser.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 87FF115A1C8E9BE700B6E676 /* Project object */;
+}
