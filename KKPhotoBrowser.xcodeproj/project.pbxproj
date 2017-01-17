@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5830631E2DF887006E44D6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1A5830621E2DF887006E44D6 /* README.md */; };
 		872639821D2A60E800AEC71E /* 20160520162626-6934-0w.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 872639811D2A60E800AEC71E /* 20160520162626-6934-0w.jpg */; };
 		872639841D2A61C700AEC71E /* 20160520162626-6934-0h.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 872639831D2A61C700AEC71E /* 20160520162626-6934-0h.jpg */; };
 		8748F2431D2F3C9C00EF3A31 /* UIImageView+KKWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8748F2421D2F3C9C00EF3A31 /* UIImageView+KKWebCache.m */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5830621E2DF887006E44D6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		872639811D2A60E800AEC71E /* 20160520162626-6934-0w.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20160520162626-6934-0w.jpg"; sourceTree = "<group>"; };
 		872639831D2A61C700AEC71E /* 20160520162626-6934-0h.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "20160520162626-6934-0h.jpg"; sourceTree = "<group>"; };
 		8748F2411D2F3C9C00EF3A31 /* UIImageView+KKWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+KKWebCache.h"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 		8786797C1D221BC00000A0A8 /* KKPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				1A5830621E2DF887006E44D6 /* README.md */,
 				8786797D1D221BE60000A0A8 /* KKPhotoBrowser.h */,
 				8786797E1D221BE60000A0A8 /* KKPhotoBrowser.m */,
 				876D3EA41D26583E004E6881 /* KKPhoto.h */,
@@ -549,6 +552,7 @@
 				8748F2791D2F43EB00EF3A31 /* YYFrameImage.m in Sources */,
 				8748F27D1D2F43EB00EF3A31 /* YYImageCache.m in Sources */,
 				8748F2431D2F3C9C00EF3A31 /* UIImageView+KKWebCache.m in Sources */,
+				1A5830631E2DF887006E44D6 /* README.md in Sources */,
 				8748F27E1D2F43EB00EF3A31 /* YYWebImageManager.m in Sources */,
 				87FF116A1C8E9BE700B6E676 /* AppDelegate.m in Sources */,
 				8748F27C1D2F43EB00EF3A31 /* YYSpriteSheetImage.m in Sources */,

@@ -31,4 +31,5 @@
     self.photoIndexLabel.shadowOffset = CGSizeMake(1, 0);
     [self addSubview:self.photoIndexLabel];
 }
+
 @end
