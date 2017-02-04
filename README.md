@@ -4,4 +4,3 @@
 
 ## 演示视频：
 <http://player.youku.com/embed/XMjQ5NjM5NDE0MA==>
-<iframe height=498 width=510 src='http://player.youku.com/embed/XMjQ5NjM5NDE0MA==' frameborder=0 'allowfullscreen'></iframe>
