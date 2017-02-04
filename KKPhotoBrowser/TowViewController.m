@@ -35,7 +35,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
     /*
     http://image.nationalgeographic.com.cn/2016/0706/20160706031714605.jpg
     http://image.nationalgeographic.com.cn/2016/0626/20160626020956787.jpg
@@ -85,8 +84,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)click
-{
+- (void)click {
     NSArray *photos = [self photos];
     NSMutableArray *mtArray = [NSMutableArray new];
     for (NSString *url in photos) {
@@ -102,9 +100,7 @@
 - (void)touchImageView:(UIGestureRecognizer *)tap {
     
     UIImageView *view = (UIImageView *)tap.view;
-    
     KKPhotoBrowser *browser = [[KKPhotoBrowser alloc]init];
-    
     NSMutableArray *mtArr = [[NSMutableArray alloc]init];
     NSArray *photo = [self photos];
     for (int n = 0; n < photo.count; n ++) {
@@ -115,7 +111,6 @@
         photo.fromViewImage = fromView.image;
         [mtArr addObject:photo];
     }
-    
     browser.currentPhotoIndex = view.tag - 10;
     [browser showInView:self showAnimatedType:KKPhotoBrowserTransitionTypeMagicMobile photos:mtArr];
 }

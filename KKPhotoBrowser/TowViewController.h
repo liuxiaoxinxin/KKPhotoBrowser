@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TowViewController : UIViewController<UINavigationControllerDelegate>
+@interface TowViewController : UIViewController <UINavigationControllerDelegate>
 
 @end

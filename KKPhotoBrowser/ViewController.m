@@ -62,7 +62,7 @@
     return @[@"20160622043924583.jpg",@"20160620055051667mini.jpg",@"20160620055051667.jpg",@"20160520162626-6934-0.jpeg",@"20160520170016-86097-0.jpeg",@"117422.png",@"IMG_3386.JPG",@"20160520162626-6934-0w.jpg",@"20160520162626-6934-0h.jpg"];
 }
 
--(void)touchImageView:(UIGestureRecognizer *)tap {
+- (void)touchImageView:(UIGestureRecognizer *)tap {
     
     UIView *view = tap.view;
     
@@ -87,4 +87,5 @@
     TowViewController *vc = [[TowViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 @end
