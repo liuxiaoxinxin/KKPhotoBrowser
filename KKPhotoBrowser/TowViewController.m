@@ -57,6 +57,7 @@
     UIScrollView *scrollView = [UIScrollView new];
     scrollView.frame = self.view.bounds;
     scrollView.contentSize = CGSizeMake(0, 160 * ceil(photo.count/2.0));
+    scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.view addSubview:scrollView];
     if (@available(iOS 11.0, *)) {
         scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
