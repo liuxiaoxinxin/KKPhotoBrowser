@@ -3,5 +3,5 @@
 - [x]  使用自定义转场动画
 - [x]  支持手势关闭浏览器
 
-## 演示视频：
-<http://player.youku.com/embed/XMjQ5NjM5NDE0MA==>
+## 效果就像这样：
+![](https://github.com/liuxiaoxinxin/KKPhotoBrowser/blob/master/ScreenRecording.gif)
