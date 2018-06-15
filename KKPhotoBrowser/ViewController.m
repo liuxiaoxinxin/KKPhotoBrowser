@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSArray *photo = [self photos];
@@ -29,7 +28,12 @@
     scrollView.frame = self.view.bounds;
     scrollView.contentSize = CGSizeMake(0, 160 * ceil(photo.count/2.0));
     [self.view addSubview:scrollView];
-    
+    if (@available(iOS 11.0, *)) {
+        scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
     int index = 0;
     for (NSString *imgPath in photo) {
         int num_x = index % 2;

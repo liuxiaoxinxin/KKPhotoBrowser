@@ -20,11 +20,9 @@
 
 @implementation KKPhotoProgressView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
         _trackTintColor = [UIColor colorWithRed:48.0/225.0 green:48.0/225.0 blue:48.0/225.0 alpha:1];
         _progressTintColor = [UIColor colorWithRed:29.0/225.0 green:148.0/225.0 blue:201.0/225.0 alpha:1];
         
@@ -46,7 +44,7 @@
         _bgdLayer.strokeColor = _trackTintColor.CGColor;
         _bgdLayer.fillColor = [UIColor clearColor].CGColor;
         [self.layer addSublayer:_bgdLayer];
-
+        
         _progressLayer = [[CAShapeLayer alloc]init];
         _progressLayer.frame = self.bounds;
         _progressLayer.path = aPath.CGPath;
@@ -60,30 +58,36 @@
     return self;
 }
 
-- (void)hideProgress {
-    self.hidden = YES;
-}
-
 - (void)setProgress:(float)progress {
     _progress = progress;
     _progressLayer.strokeEnd = progress;
     if (progress < 1) {
         _progressLayer.hidden = NO;
     } else {
-        [self performSelector:@selector(hideProgress) withObject:self afterDelay:0.2];
+        [self performSelector:@selector(hide) withObject:self afterDelay:0.2];
     }
 }
 
-- (void)setTrackTintColor:(UIColor *)trackTintColor
-{
+- (void)setTrackTintColor:(UIColor *)trackTintColor {
     _trackTintColor = trackTintColor;
     _bgdLayer.strokeColor = trackTintColor.CGColor;
 }
 
-- (void)setProgressTintColor:(UIColor *)progressTintColor
-{
+- (void)setProgressTintColor:(UIColor *)progressTintColor {
     _progressTintColor = progressTintColor;
     _progressLayer.strokeColor = progressTintColor.CGColor;
 }
 
+- (void)show {
+    [UIView animateWithDuration:0.2 animations:^{
+        self.alpha = 1.0f;
+    }];
+}
+
+- (void)hide {
+    [UIView animateWithDuration:0.2 animations:^{
+        self.alpha = 0.0f;
+    }];
+}
 @end
+

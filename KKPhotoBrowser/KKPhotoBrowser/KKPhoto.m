@@ -10,8 +10,7 @@
 
 @implementation KKPhoto
 
-- (instancetype)initWithImage:(UIImage *)image
-{
+- (instancetype)initWithImage:(UIImage *)image {
     self = [super init];
     if (self) {
         _image = image;
@@ -19,12 +18,12 @@
     return self;
 }
 
-- (instancetype)initWithUrl:(NSURL *)url
-{
+- (instancetype)initWithUrl:(NSURL *)url {
     self = [super init];
     if (self) {
         _url = url;
     }
     return self;
 }
+
 @end

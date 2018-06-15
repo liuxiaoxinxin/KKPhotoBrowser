@@ -12,9 +12,12 @@
 #import "KKPhotoToolBar.h"
 #import "UIView+Size.h"
 
-@interface KKPhotoBrowser ()<UIScrollViewDelegate,KKPhotoZoomingViewDelegate>
+@interface KKPhotoBrowser ()<
+UIScrollViewDelegate,
+KKPhotoZoomingViewDelegate,
+UIViewControllerTransitioningDelegate>
 {
-    NSArray *_photoViews; //所有图片view
+    NSArray *_photoViews; // 所有图片view
     KKPhotoToolBar *_toolBar;
     KKPhotoBrowserTransition *_browserTransition;
     KKPhotoInteractiveTransition *_interactiveTransition;
@@ -30,10 +33,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (@available(iOS 11.0, *)) {
+        self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
     self.oldNavigationBarHidden = self.navigationController.navigationBar.hidden;
     self.view.backgroundColor = [UIColor blackColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.width * self.photos.count, 0);
     self.scrollView.contentOffset = CGPointMake(self.currentPhotoIndex * self.scrollView.width, 0);
@@ -43,23 +50,17 @@
     _toolBar.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_toolBar];
     
-    __weak KKPhotoBrowser *weakSelf = self;
     _interactiveTransition = [[KKPhotoInteractiveTransition alloc]initWithPanGestureForViewController:self];
-    _interactiveTransition.GestureRecognizerStateBegan = ^(){
-        [weakSelf.navigationController popViewControllerAnimated:YES];
-    };
     [self showPhoto];
     [self reloadIndexNumbers:self.currentPhotoIndex];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:self.navigationBarHidden animated:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:self.oldNavigationBarHidden animated:animated];
 }
@@ -69,26 +70,17 @@
     self.scrollView.delegate = nil;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - UINavigationControllerDelegate
 
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                  animationControllerForOperation:(UINavigationControllerOperation)operation
-                                               fromViewController:(UIViewController *)fromVC
-                                                 toViewController:(UIViewController *)toVC {
-    BOOL isPush = operation == UINavigationControllerOperationPush;
-    KKPhotoTransitionType type = isPush ? kPhotoTransitionPush : kPhotoTransitionPop;
-    _browserTransition = [KKPhotoBrowserTransition transitionWithType:type];
-    return _browserTransition;
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    return [KKPhotoBrowserTransition transitionWithType:kPhotoTransitionPush];
 }
 
-- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-                         interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
-    //手势开始的时候传入手势过渡代理
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return [KKPhotoBrowserTransition transitionWithType:kPhotoTransitionPop];
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
     return [_interactiveTransition interation] ? _interactiveTransition : nil;
 }
 
@@ -108,19 +100,19 @@
 
 #pragma mark - ZoomViewDelegate
 
-- (void)zoomingViewDidTouch:(KKPhotoZoomingView *)view
-{
+- (void)zoomingViewDidTouch:(KKPhotoZoomingView *)view {
     if (self.navigationBarHidden == NO) {
         BOOL hidden = self.navigationController.navigationBarHidden;
         [self.navigationController setNavigationBarHidden:!hidden animated:YES];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
 #pragma mark -
 #pragma mark 私有
 
-- (void)showPhoto
-{
+- (void)showPhoto {
     if (self.photos == nil) return;
     //第一次
     if (self.scrollView.subviews.count == 0){
@@ -173,8 +165,7 @@
 }
 
 //准备显示下一张图片，如果已有view直接赋值，如果没有则subView后再赋值
-- (void)layoutNextImageViewIsForward:(BOOL)isForward
-{
+- (void)layoutNextImageViewIsForward:(BOOL)isForward {
     int forward = isForward ? 1 : -1;
     int index = (int)self.currentPhotoIndex + forward;
     if (index < 0 || index > self.photos.count) return;
@@ -216,8 +207,9 @@
         return;
     }
     
-    viewController.navigationController.delegate = self;
-    [viewController.navigationController pushViewController:self animated:YES];
+    self.transitioningDelegate = self;
+    self.navigationBarHidden = YES;
+    [viewController presentViewController:self animated:YES completion:nil];
 }
 
 #pragma mark - set get
@@ -230,7 +222,6 @@
 - (void)setNavigationBarHidden:(BOOL)navigationBarHidden
 {
     _navigationBarHidden = navigationBarHidden;
-//    [self.navigationController setNavigationBarHidden:navigationBarHidden animated:YES];
 }
 
 - (void)setPhotos:(NSArray<KKPhoto *> *)photos {
@@ -251,7 +242,6 @@
             return photoView;
         }
     }
-    
     return nil;
 }
 

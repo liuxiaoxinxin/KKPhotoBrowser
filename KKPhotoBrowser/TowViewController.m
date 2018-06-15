@@ -58,7 +58,12 @@
     scrollView.frame = self.view.bounds;
     scrollView.contentSize = CGSizeMake(0, 160 * ceil(photo.count/2.0));
     [self.view addSubview:scrollView];
-    
+    if (@available(iOS 11.0, *)) {
+        scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
     int index = 0;
     for (NSString *imgPath in photo) {
         int num_x = index % 2;
@@ -66,6 +71,7 @@
         
         UIImageView *imageView = [[UIImageView alloc]init];
         imageView.clipsToBounds = YES;
+        imageView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
         imageView.userInteractionEnabled = YES;
         imageView.frame = CGRectMake(10 + num_x * 160, 20 + num_y * 160, 150, 150);
         [imageView yy_setImageWithURL:[NSURL URLWithString:imgPath] placeholder:nil];
@@ -77,11 +83,6 @@
         
         index ++;
     }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)click {
@@ -120,15 +121,5 @@
     [[YYWebImageManager sharedManager].cache.diskCache removeAllObjects];
     [[YYWebImageManager sharedManager].cache.memoryCache removeAllObjects];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

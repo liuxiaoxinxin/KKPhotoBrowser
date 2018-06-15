@@ -14,4 +14,7 @@
 @property (nonatomic, strong) UIColor *progressTintColor;
 @property (nonatomic, assign) float progress;
 
+- (void)show;
+- (void)hide;
+
 @end

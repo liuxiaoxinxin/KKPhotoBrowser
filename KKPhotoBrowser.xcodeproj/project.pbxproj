@@ -227,8 +227,6 @@
 				87A5E5F71D36132E0039AAAE /* 20160620055051667.jpg */,
 				87A5E5F91D3614A40039AAAE /* 20160620055051667mini.jpg */,
 				87A5E5FB1D3618930039AAAE /* 20160622043924583.jpg */,
-				876D3EA71D265E40004E6881 /* UIView+Size.h */,
-				876D3EA81D265E40004E6881 /* UIView+Size.m */,
 				87FF11681C8E9BE700B6E676 /* AppDelegate.h */,
 				87FF11691C8E9BE700B6E676 /* AppDelegate.m */,
 				87FF116B1C8E9BE700B6E676 /* ViewController.h */,
@@ -311,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				1A5830621E2DF887006E44D6 /* README.md */,
+				876D3EA71D265E40004E6881 /* UIView+Size.h */,
+				876D3EA81D265E40004E6881 /* UIView+Size.m */,
 				8786797D1D221BE60000A0A8 /* KKPhotoBrowser.h */,
 				8786797E1D221BE60000A0A8 /* KKPhotoBrowser.m */,
 				876D3EA41D26583E004E6881 /* KKPhoto.h */,
@@ -470,7 +470,8 @@
 				TargetAttributes = {
 					87FF11611C8E9BE700B6E676 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = PZN4E4LRFY;
+						DevelopmentTeam = PH5F8FPUE6;
+						ProvisioningStyle = Manual;
 					};
 					87FF117D1C8E9BE700B6E676 = {
 						CreatedOnToolsVersion = 7.2;
@@ -717,7 +718,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = PZN4E4LRFY;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PH5F8FPUE6;
 				INFOPLIST_FILE = KKPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -725,6 +727,8 @@
 				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.photoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6e6a3019-562c-4042-b9f8-d0e3d69c4f7f";
+				PROVISIONING_PROFILE_SPECIFIER = "XC Wildcard  Profile";
 			};
 			name = Debug;
 		};
@@ -733,12 +737,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = PZN4E4LRFY;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PH5F8FPUE6;
 				INFOPLIST_FILE = KKPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.photoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6e6a3019-562c-4042-b9f8-d0e3d69c4f7f";
+				PROVISIONING_PROFILE_SPECIFIER = "XC Wildcard  Profile";
 			};
 			name = Release;
 		};

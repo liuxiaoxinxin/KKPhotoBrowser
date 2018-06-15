@@ -13,8 +13,7 @@
 
 - (instancetype)initWithPanGestureForViewController:(KKPhotoBrowser *)viewController;
 
-///是否在交互
+/// 是否在交互
 - (BOOL)interation;
 
-@property (nonatomic, copy) void(^GestureRecognizerStateBegan)();
 @end

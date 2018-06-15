@@ -53,7 +53,7 @@
     
     _progressView = [[KKPhotoProgressView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
     _progressView.center = CGPointMake(self.width/2, self.height/2);
-    _progressView.hidden = YES;
+    [_progressView hide];
     [self addSubview:_progressView];
 }
 
@@ -96,17 +96,17 @@
 }
 
 - (void)downloadImage {
-    _progressView.hidden = NO;
+    [_progressView show];
     [_imageView kk_setImageViewURL:self.photo.url placeholder:nil progress:^(NSInteger receivedSize, NSInteger expectedSize) {
 
-        _progressView.hidden = NO;
+        [_progressView show];
         _progressView.progress = (CGFloat)receivedSize/(CGFloat)expectedSize;
     } completion:^(UIImage *image, NSURL *url, NSError *error) {
         
         if (![url.absoluteString isEqualToString: self.photo.url.absoluteString]) return;
         [self setMaxMinZoomScalesForCurrentBounds];
         [self adjustPhotoViewFrame];
-        _progressView.hidden = YES;
+        [_progressView hide];
     }];
 }
 
