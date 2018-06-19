@@ -22,4 +22,5 @@ typedef NS_ENUM(NSInteger,KKPhotoTransitionType) {
 
 + (instancetype)transitionWithType:(KKPhotoTransitionType)type;
 - (instancetype)initWithTransitionType:(KKPhotoTransitionType)type;
+
 @end

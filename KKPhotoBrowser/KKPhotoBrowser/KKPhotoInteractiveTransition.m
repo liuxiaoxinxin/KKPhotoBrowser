@@ -85,7 +85,6 @@
     UIImageView *tempView = containerView.subviews.lastObject;
     _persent = fabs(changePoint.y / 500.0f);
     tempView.origin = newPoint; // 直接移动imageView
-    //     DLog(@"%f,timeOffset = %f", _persent, containerView.layer.timeOffset);
     [self updateInteractiveTransition:_persent];
 }
 

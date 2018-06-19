@@ -12,8 +12,8 @@
 #import "KKPhotoToolBar.h"
 #import "UIView+Size.h"
 
-@interface KKPhotoBrowser ()<
-UIScrollViewDelegate,
+@interface KKPhotoBrowser ()
+<UIScrollViewDelegate,
 KKPhotoZoomingViewDelegate,
 UIViewControllerTransitioningDelegate>
 {
@@ -24,7 +24,13 @@ UIViewControllerTransitioningDelegate>
 }
 
 @property (nonatomic, weak) UIViewController* viewController;
+
 @property (nonatomic, assign) BOOL oldNavigationBarHidden;
+
+@property (nonatomic, readwrite) UIScrollView *scrollView;
+
+@property (nonatomic, readwrite) NSArray<KKPhoto *> *photos;
+
 @end
 
 @implementation KKPhotoBrowser
@@ -259,4 +265,5 @@ UIViewControllerTransitioningDelegate>
     }
     return _scrollView;
 }
+
 @end

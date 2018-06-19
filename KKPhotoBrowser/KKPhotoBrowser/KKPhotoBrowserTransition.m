@@ -32,11 +32,10 @@
 
 // 动画定义
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-    switch (_traType) {
+    switch (self.traType) {
         case kPhotoTransitionPush:
             [self browesPushAnimation:transitionContext];
             break;
-            
         case kPhotoTransitionPop:
             [self browesPopAnimation:transitionContext];
             break;

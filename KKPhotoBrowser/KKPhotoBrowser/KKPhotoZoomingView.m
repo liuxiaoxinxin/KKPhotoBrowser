@@ -13,18 +13,17 @@
 
 @interface KKPhotoZoomingView()
 {
-    YYAnimatedImageView *_imageView;
+    KKImageView *_imageView;
     KKPhotoProgressView *_progressView;
 }
+
 @end
 
 @implementation KKPhotoZoomingView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
         [self layotImageView];
         
         self.backgroundColor = [UIColor clearColor];
@@ -46,7 +45,7 @@
 }
 
 - (void)layotImageView {
-    _imageView = [YYAnimatedImageView new];
+    _imageView = [KKImageView new];
     _imageView.size = self.size;
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:_imageView];
@@ -82,8 +81,7 @@
     _imageView.center = centerPoint;
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
     
     UITouch *touch = [touches anyObject];
@@ -169,16 +167,9 @@
         minScale = 1.0;
     }
     CGFloat maxScale = 2.0;
-//    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-//        maxScale = maxScale / [[UIScreen mainScreen] scale];
-//    }
     self.maximumZoomScale = maxScale;
     self.minimumZoomScale = minScale;
     self.zoomScale = minScale;
-}
-
-- (void)hideLoadingView {
-    
 }
 
 - (void)setPhoto:(KKPhoto *)photo {
@@ -213,7 +204,7 @@
     }
 }
 
--(YYAnimatedImageView *)contentView {
+- (KKImageView *)contentView {
     return _imageView;
 }
 

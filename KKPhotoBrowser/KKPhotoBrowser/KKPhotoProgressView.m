@@ -89,5 +89,6 @@
         self.alpha = 0.0f;
     }];
 }
+
 @end
 
